@@ -861,6 +861,7 @@ public class BiometricsController extends BaseController /* implements Initializ
 		if (isExceptionPhoto(currentModality)) {
 			try {
 				//saveProofOfExceptionDocument(byteArray);
+				//suspend capture_alert
 				generateAlert(RegistrationConstants.ALERT_INFORMATION,
 						RegistrationUIConstants.getMessageLanguageSpecific(RegistrationUIConstants.BIOMETRIC_CAPTURE_SUCCESS));
 
@@ -1151,7 +1152,7 @@ public class BiometricsController extends BaseController /* implements Initializ
 							currentModality);
 
 					refreshContinueButton();
-					
+					//suspend bio_capture_alert
 					generateAlert(RegistrationConstants.ALERT_INFORMATION,
 							RegistrationUIConstants.getMessageLanguageSpecific(RegistrationUIConstants.BIOMETRIC_CAPTURE_SUCCESS));
 					biometric.setDisable(false);

@@ -219,6 +219,9 @@ public class PreRegistrationDataSyncServiceImpl extends BaseService implements P
 		if(preRegistration == null || !FileUtils.getFile(preRegistration.getPacketPath()).exists()) {
 			LOGGER.info("Pre-Registration ID is not present downloading {}", preRegistrationId);
 			return downloadAndSavePacket(preRegistration, preRegistrationId, lastUpdatedTimeStamp);
+
+
+
 		}
 
 		if(lastUpdatedTimeStamp == null ||

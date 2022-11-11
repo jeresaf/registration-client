@@ -420,6 +420,13 @@
 			</exclusions>
 		</dependency>
 
+		<!--Fugitsu document scanner-->
+		<!--<dependency>
+			<groupId>io.mosip.registration</groupId>
+			<artifactId>ref-document-scanner</artifactId>
+			<version>${mosip.core.kernel.version}</version>
+		</dependency>-->
+
 		<dependency>
 			<groupId>io.mosip.registration</groupId>
 			<artifactId>registration-api-stub-impl</artifactId>

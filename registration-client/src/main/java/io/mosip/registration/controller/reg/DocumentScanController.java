@@ -150,7 +150,7 @@ public class DocumentScanController extends BaseController {
 			scanPopUpViewController.getScanImage().setVisible(true);
 			scanPopUpViewController.getScanningMsg().setVisible(false);
 			scanPopUpViewController.showPreview(true);
-			generateAlert(RegistrationConstants.ALERT_INFORMATION, RegistrationUIConstants.getMessageLanguageSpecific(RegistrationUIConstants.DOC_CAPTURE_SUCCESS));
+			//generateAlert(RegistrationConstants.ALERT_INFORMATION, RegistrationUIConstants.getMessageLanguageSpecific(RegistrationUIConstants.DOC_CAPTURE_SUCCESS));
 
 		} catch (RuntimeException exception) {
 			LOGGER.error("Exception while scanning documents for registration", exception);

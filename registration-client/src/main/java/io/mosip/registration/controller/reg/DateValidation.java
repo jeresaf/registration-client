@@ -199,6 +199,9 @@ public class DateValidation extends BaseController {
 
 		TextField ageField = (TextField) getFxElement(parentPane,
 				fieldId + RegistrationConstants.AGE_FIELD + RegistrationConstants.TEXT_FIELD);
+
+		//ageField.setEditable(false);
+
 		if (ageField != null) {
 			LocalDate date = getCurrentSetDate(parentPane, fieldId);
 			String age = String.valueOf(Period.between(date, LocalDate.now(ZoneId.of("UTC"))).getYears());
@@ -233,10 +236,10 @@ public class DateValidation extends BaseController {
 		defaultDate.set(Calendar.MONTH, 0);
 		defaultDate.add(Calendar.YEAR, -age);
 
-		dd.setText(String.valueOf(defaultDate.get(Calendar.DATE)));
+		/*dd.setText(String.valueOf(defaultDate.get(Calendar.DATE)));
 		mm.setText(String.valueOf(defaultDate.get(Calendar.MONTH)+ 1));
-		yyyy.setText(String.valueOf(defaultDate.get(Calendar.YEAR)));
-
+		yyyy.setText(String.valueOf(defaultDate.get(Calendar.YEAR)));*/
+   //data validation
 	}
 
 	private boolean isValidDate(Validator validator, Pane parentPane, String dd, String mm, String yyyy, String fieldId) {

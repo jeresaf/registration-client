@@ -396,6 +396,7 @@ public class AuthenticationController extends BaseController implements Initiali
 					fingerPrintScanButton.setDisable(true);
 					generateAlert(RegistrationConstants.ALERT_INFORMATION,
 							RegistrationUIConstants.getMessageLanguageSpecific(RegistrationUIConstants.BIOMETRIC_CAPTURE_SUCCESS));
+
 					loadNextScreen();
 				} else {
 					operatorAuthContinue.setDisable(true);

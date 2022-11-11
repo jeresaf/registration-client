@@ -86,7 +86,7 @@ public class PreRegZipHandlingServiceImpl extends BaseService implements PreRegZ
 	@Value("${mosip.registration.prereg.packet.entires.limit:15}")
 	private int THRESHOLD_ENTRIES;
 
-	@Value("${mosip.registration.prereg.packet.size.limit:200000}")
+	@Value("${mosip.registration.prereg.packet.size.limit:5000000}")
 	private long THRESHOLD_SIZE;
 
 	@Value("${mosip.registration.prereg.packet.threshold.ratio:10}")
@@ -129,9 +129,13 @@ public class PreRegZipHandlingServiceImpl extends BaseService implements PreRegZ
 					}
 
 					if(totalReadArchiveSize > THRESHOLD_SIZE) {
+
 						LOGGER.error("Archive size read in the packet is more than the threshold");
+
 						throw new RegBaseCheckedException(PRE_REG_PACKET_ZIP_SIZE_THRESHOLD_CROSSED.getErrorCode(),
 								PRE_REG_PACKET_ZIP_SIZE_THRESHOLD_CROSSED.getErrorMessage());
+
+
 					}
 				}
 			}
@@ -181,11 +185,19 @@ public class PreRegZipHandlingServiceImpl extends BaseService implements PreRegZ
 					}
 
 					if(totalReadArchiveSize > THRESHOLD_SIZE) {
+						LOGGER.error("#######################: "+Long.toString(THRESHOLD_SIZE));
+						LOGGER.error("#######################: "+Long.toString(totalReadArchiveSize));
+
 						LOGGER.error("Archive size read in the packet is more than the threshold", totalReadArchiveSize);
 						throw new RegBaseCheckedException(PRE_REG_PACKET_ZIP_SIZE_THRESHOLD_CROSSED.getErrorCode(),
 								PRE_REG_PACKET_ZIP_SIZE_THRESHOLD_CROSSED.getErrorMessage());
 					}
+
 				}
+
+				LOGGER.info("Threashold Success#######################: "+Long.toString(THRESHOLD_SIZE));
+				LOGGER.info("Total Size Success#######################: "+Long.toString(totalReadArchiveSize));
+
 			}
 			
 			Iterator<Entry<String, DocumentDto>> entries = getRegistrationDTOFromSession().getDocuments().entrySet().iterator();

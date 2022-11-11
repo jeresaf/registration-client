@@ -85,6 +85,8 @@ public class DOBAgeFxControl extends FxControl {
 			labels.add(this.uiFieldDTO.getLabel().get(lCode));
 		});
 
+
+
 		/** DOB Label */
 		ageVBox.getChildren().add(getLabel(uiFieldDTO.getId() + RegistrationConstants.LABEL,
 				String.join(RegistrationConstants.SLASH, labels) + mandatorySuffix, RegistrationConstants.DEMOGRAPHIC_FIELD_LABEL, true, ageVBox.getWidth()));
@@ -105,7 +107,7 @@ public class DOBAgeFxControl extends FxControl {
 //						resourceBundle.getString("ageOrDOBField"), RegistrationConstants.DEMOGRAPHIC_FIELD_LABEL, true,
 //						ageVBox.getWidth()));
 
-		Label label = getLabel(uiFieldDTO.getId() + "OR" + RegistrationConstants.LABEL,
+		Label label = getLabel(uiFieldDTO.getId() + " " + RegistrationConstants.LABEL,
 				resourceBundle.getString("ageOrDOBField"), RegistrationConstants.DEMOGRAPHIC_FIELD_LABEL, true, dobHBox.getWidth());
 		label.setMinWidth(Region.USE_PREF_SIZE);
 		label.setAlignment(Pos.CENTER);
@@ -143,9 +145,10 @@ public class DOBAgeFxControl extends FxControl {
 		dateVBox.getChildren().add(getLabel(uiFieldDTO.getId() + dd + RegistrationConstants.LABEL, text,
 				RegistrationConstants.DEMOGRAPHIC_FIELD_LABEL, false, prefWidth));
 
+
 		/** DOB Text Field */
 		dateVBox.getChildren().add(getTextField(uiFieldDTO.getId() + dd + RegistrationConstants.TEXT_FIELD, text,
-				RegistrationConstants.DEMOGRAPHIC_TEXTFIELD, prefWidth, false));
+				RegistrationConstants.DEMOGRAPHIC_TEXTFIELD, prefWidth, dd.equals(RegistrationConstants.AGE_FIELD)));
 
 		return dateVBox;
 	}
@@ -153,6 +156,8 @@ public class DOBAgeFxControl extends FxControl {
 
 	@Override
 	public void setData(Object data) {
+		//LOGGER.info("Demographic data >>>>>>>>>>>>>" +data);
+
 		TextField dd = (TextField) getField(
 				uiFieldDTO.getId() + RegistrationConstants.DD + RegistrationConstants.TEXT_FIELD);
 		TextField mm = (TextField) getField(
