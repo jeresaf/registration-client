@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3c992ca1-5aa5-4cbd-b920-98f44a69045c" name="Changes" comment="Init and separated changes required for NIRA">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SCHEMA_0.1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicanttype.mvel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bioCorrectionProcess.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/reg/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/reg/db.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/reg/log/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/reg/log/log.ctrl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/reg/log/logmirror.ctrl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/reg/seg0/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/reg/service.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fields consent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fields schema" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lostProcess.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newProcess.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ref-impl/ref-document-scanner/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ref-impl/ref-document-scanner/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ref-impl/ref-document-scanner/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ref-impl/ref-document-scanner/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ref-impl/ref-document-scanner/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ref-impl/ref-document-scanner/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ref-impl/ref-document-scanner/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/controller/nira/GenericControllerCust.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/controller/reg/nira/DateValidationCust.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/controller/reg/nira/FullNameValidations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/controller/reg/nira/UpdateUINCustController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/controller/reg/nira/ValidationsCust.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/ButtonCustFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/CheckBoxCustFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/DOBAgeCustFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/DOBCustFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/DocumentCustFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/DropDownCustFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/FullNameTextFieldFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/GroupLabelFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/LegendFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/RadioButtonFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira/TextFieldCustFxControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/resources/fxml/GenericRegistrationCustLayout.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/resources/fxml/RegistrationCust.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-client/src/main/resources/fxml/UpdateUINCust.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-services/.UNKNOWN_JARS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-services/SCHEMA_0.5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-services/lib/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-services/lib/mosip-application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-services/newProcess.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration-services/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/updateProcess.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/registration_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ref_document_scanner_1_2_0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration-api-stub-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/registration-api-stub-impl/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/registration-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/controller/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/controller/auth/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/controller/reg/PacketHandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/controller/reg/PacketHandlerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration-client/src/main/resources/application-pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/registration-client/src/main/resources/application-pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration-client/src/main/resources/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/registration-client/src/main/resources/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration-services/src/main/java/io/mosip/registration/constants/RegistrationConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration-services/src/main/java/io/mosip/registration/constants/RegistrationConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration-services/src/main/java/io/mosip/registration/dao/impl/IdentitySchemaDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration-services/src/main/java/io/mosip/registration/dao/impl/IdentitySchemaDaoImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Thob6Qy2eDi8QqGNDPKXDEaPTv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jerryaiko/Documents/sites/mosip/registration/registration-client/src/main/resources/fxml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5cab500fdf66b5741329afa216eb38cf&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/registration-client/src/main/resources/fxml" />
+      <recent name="$PROJECT_DIR$/registration-client/src/main/java/io/mosip/registration/util/control/impl/nira" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.mosip.registration.controller.reg" />
+      <recent name="io.mosip.registration.controller.nira" />
+      <recent name="io.mosip.registration.controller.reg.nira" />
+      <recent name="io.mosip.registration.util.control.impl.nira" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c992ca1-5aa5-4cbd-b920-98f44a69045c" name="Changes" comment="" />
+      <created>1691504743188</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691504743188</updated>
+      <workItem from="1691504746987" duration="1365000" />
+      <workItem from="1691567325766" duration="18040000" />
+      <workItem from="1691657175207" duration="23477000" />
+      <workItem from="1692079808859" duration="17234000" />
+      <workItem from="1692168148597" duration="1013000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init and separated changes required for NIRA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init and separated changes required for NIRA" />
+  </component>
+</project>

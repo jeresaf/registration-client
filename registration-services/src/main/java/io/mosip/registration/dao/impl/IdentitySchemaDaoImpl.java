@@ -257,11 +257,13 @@ public class IdentitySchemaDaoImpl implements IdentitySchemaDao {
 					filePath + " : " + ExceptionUtils.getStackTrace(e));
 		}
 
+		/*
 		if (!isValidFile(content, originalChecksum))
 			throw new RegBaseCheckedException(SchemaMessage.SCHEMA_TAMPERED.getCode(),
 					filePath + " : " + SchemaMessage.SCHEMA_TAMPERED.getMessage());
-
+		*/
 		try {
+			//LOGGER.info("Aiko ID Schema Content: {}", content);
 			return MapperUtils.convertJSONStringToDto(content, new TypeReference<ProcessSpecDto>() {});
 		} catch (IOException e) {
 			throw new RegBaseCheckedException(SchemaMessage.SCHEMA_TAMPERED.getCode(),

@@ -1,3 +1,91 @@
+
+/* Added NIRA CSS */
+
+.sectionDemoGraphicFieldLabel {
+	-fx-background-color: #ffffff;
+	-fx-border-width: 0.0;
+	-fx-text-fill: #050505;
+	-fx-font-size: 20px;
+	-fx-font-weight: bold;
+}
+
+.sectionDemographic
+{
+	-fx-border-color: #b5b5b5;
+	-fx-border-width: 1px;
+	-fx-border-radius: 5px;
+	-fx-background-color: #ffffff;
+	-fx-padding: 10px;
+}
+
+.demoGraphicPaneContentMargin {
+	-fx-padding: 50px;
+}
+
+.demoGraphicFieldLabelAsterisk {
+	-fx-background-color: #ffffff;
+	-fx-border-width: 0.0;
+	-fx-text-fill: red;
+	-fx-font-size: 1em;
+	-fx-text-background-color: red;
+}
+
+.demographicComboboxHalf {
+	-fx-background-color: #ffffff;
+	-fx-border-width: 0.0 0.0 1.0 0.0;
+	-fx-border-color: #C9C9C9;
+	-fx-font-size: 14.0px;
+	-fx-pref-height: 10.0px;
+	-fx-pref-width: 400.0px;
+}
+
+.demographicComboboxFull {
+	-fx-background-color: #ffffff;
+	-fx-border-width: 0.0 0.0 1.0 0.0;
+	-fx-border-color: #C9C9C9;
+	-fx-font-size: 14.0px;
+	-fx-pref-height: 10.0px;
+	-fx-pref-width: 800.0px;
+}
+
+.demographicComboboxHalfFocused {
+	-fx-background-color: #ffffff;
+	-fx-border-width: 0.0 0.0 1.0 0.0;
+	-fx-border-color: red;
+	-fx-font-size: 14.0px;
+	-fx-pref-height: 10.0px;
+	-fx-pref-width: 400.0px;
+}
+
+.demographicComboboxHalf:focused {
+	-fx-background-color: #ffffff;
+	-fx-border-width: 0.0 0.0 1.0 0.0;
+	-fx-border-color: #005baa;
+	-fx-font-size: 14.0px;
+	-fx-pref-height: 10.0px;
+	-fx-pref-width: 400.0px;
+}
+
+.demographicComboboxFullFocused {
+	-fx-background-color: #ffffff;
+	-fx-border-width: 0.0 0.0 1.0 0.0;
+	-fx-border-color: red;
+	-fx-font-size: 14.0px;
+	-fx-pref-height: 10.0px;
+	-fx-pref-width: 800.0px;
+}
+
+.demographicComboboxFull:focused {
+	-fx-background-color: #ffffff;
+	-fx-border-width: 0.0 0.0 1.0 0.0;
+	-fx-border-color: #005baa;
+	-fx-font-size: 14.0px;
+	-fx-pref-height: 10.0px;
+	-fx-pref-width: 800.0px;
+}
+
+/* Added NIRA CSS end */
+
 #virtualKeyboard {
 	-fx-background-radius: 6.0, 5.0;
 	-fx-font-size: 14.0px;

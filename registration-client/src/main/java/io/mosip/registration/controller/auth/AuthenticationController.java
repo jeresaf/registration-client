@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
 
+import io.mosip.registration.controller.nira.GenericControllerCust;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -178,7 +179,7 @@ public class AuthenticationController extends BaseController implements Initiali
 	private RegistrationController registrationController;
 	
 	@Autowired
-	private GenericController genericController;
+	private GenericControllerCust genericController;
 
 	@Autowired
 	private OTPManager otpManager;

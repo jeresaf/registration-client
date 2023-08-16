@@ -1987,4 +1987,11 @@ public class RegistrationConstants {
 	public static final String JPG_COMPRESSION_QUALITY = "mosip.registration.doc.jpg.compression";
 	public static final String APPLICANT_TYPE_MVEL_SCRIPT = "mosip.kernel.applicantType.mvel.file";
 	public static final String FIELDS_TO_RETAIN_ON_PRID_FETCH = "mosip.registration.fields.to.retain.post.prid.fetch";
+
+	/* Added NIRA Constants */
+	public static final String CREATE_PACKET_PAGE_CUST = "/fxml/RegistrationCust.fxml";
+	public static final String UIN_UPDATE_CUST = "/fxml/UpdateUINCust.fxml";
+	public static final String DEMOGRAPHIC_COMBOBOX_HALF = "demographicComboboxHalf";
+	public static final String DEMOGRAPHIC_COMBOBOX_FULL = "demographicComboboxFull";
+	public static final String DEMOGRAPHIC_FIELD_LABEL_ASTERISK = "demoGraphicFieldLabelAsterisk";
 }

@@ -17,6 +17,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import io.mosip.registration.controller.nira.GenericControllerCust;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -230,7 +231,7 @@ public class PacketHandlerController extends BaseController implements Initializ
 	private HeaderController headerController;
 
 	@Autowired
-	private GenericController genericController;
+	private GenericControllerCust genericController;
 	
 	@Autowired
 	private LanguageSelectionController languageSelectionController;
@@ -436,7 +437,7 @@ public class PacketHandlerController extends BaseController implements Initializ
 				case NEW:
 				case LOST:
 				case CORRECTION:
-					Parent createRoot = getRoot(RegistrationConstants.CREATE_PACKET_PAGE);
+					Parent createRoot = getRoot(RegistrationConstants.CREATE_PACKET_PAGE_CUST);
 					getScene(createRoot).setRoot(createRoot);
 					getScene(createRoot).getStylesheets().add(ClassLoader.getSystemClassLoader().getResource(getCssName()).toExternalForm());
 					if(registrationController.createRegistrationDTOObject(processId)) {
@@ -446,7 +447,7 @@ public class PacketHandlerController extends BaseController implements Initializ
 					break;
 				case UPDATE:
 					if(registrationController.createRegistrationDTOObject(processId)) {
-						Parent root = BaseController.load(getClass().getResource(RegistrationConstants.UIN_UPDATE),
+						Parent root = BaseController.load(getClass().getResource(RegistrationConstants.UIN_UPDATE_CUST),
 								applicationContext.getBundle(registrationController.getSelectedLangList().get(0), RegistrationConstants.LABELS));
 						getScene(root);
 						LOGGER.info(PACKET_HANDLER, APPLICATION_NAME, APPLICATION_ID, "Loading Update UIN screen ended.");

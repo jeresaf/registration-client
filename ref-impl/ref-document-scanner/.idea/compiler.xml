@@ -2,15 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="registration-test" />
-        <module name="registration-api" />
-        <module name="registration-services" />
-        <module name="registration-api-stub-impl" />
-        <module name="registration-client" />
+        <module name="ref-document-scanner" />
       </profile>
     </annotationProcessing>
   </component>
