@@ -15,6 +15,7 @@ import io.mosip.registration.dto.mastersync.GenericDto;
 import io.mosip.registration.dto.packetmanager.DocumentDto;
 import io.mosip.registration.dto.schema.UiFieldDTO;
 import io.mosip.registration.entity.DocumentType;
+import io.mosip.registration.enums.FlowType;
 import io.mosip.registration.service.doc.category.ValidDocumentService;
 import io.mosip.registration.service.sync.MasterSyncService;
 import io.mosip.registration.util.control.FxControl;
@@ -602,6 +603,97 @@ public class DocumentCustFxControl extends FxControl {
 				RegistrationConstants.APPLICANT_TYPE_MVEL_SCRIPT, SCRIPT_NAME), getRegistrationDTo());
 		LOGGER.info("Document field {}, for applicantType : {}", uiFieldDTO.getId(), applicantTypeCode);
 		if(applicantTypeCode != null) {
+			if(applicantTypeCode.equals("KER-MSD-147") && (getRegistrationDTo().getFlowType().equals(FlowType.LOST) ||
+					getRegistrationDTo().getFlowType().equals(FlowType.CORRECTION))) {
+				/*
+				if (itc == NonResident && genderType == MALE && ageCode == CHILD && !isBioExPresent) {
+					return "001";
+				} else if (itc == NonResident && genderType == MALE && ageCode == ADULT && !isBioExPresent) {
+					return "002";
+				} else if (itc == Resident && genderType == MALE && ageCode == CHILD && !isBioExPresent) {
+					return "003";
+				} else if (itc == Resident && genderType == MALE && ageCode == ADULT && !isBioExPresent) {
+					return "004";
+				} else if (itc == NonResident && genderType == FEMALE && ageCode == CHILD && !isBioExPresent) {
+					return "005";
+				} else if (itc == NonResident && genderType == FEMALE && ageCode == ADULT && !isBioExPresent) {
+					return "006";
+				} else if (itc == Resident && genderType == FEMALE && ageCode == CHILD && !isBioExPresent) {
+					return "007";
+				} else if (itc == Resident && genderType == FEMALE && ageCode == ADULT && !isBioExPresent) {
+					return "008";
+				} else if (itc == NonResident && genderType == Others && ageCode == CHILD && !isBioExPresent) {
+					return "005";
+				} else if (itc == NonResident && genderType == Others && ageCode == ADULT && !isBioExPresent) {
+					return "006";
+				} else if (itc == Resident && genderType == Others && ageCode == CHILD && !isBioExPresent) {
+					return "007";
+				} else if (itc == Resident && genderType == Others && ageCode == ADULT && !isBioExPresent) {
+					return "008";
+				} else if (itc == NonResident && genderType == MALE && ageCode == CHILD && isBioExPresent) {
+					return "009";
+				} else if (itc == NonResident && genderType == MALE && ageCode == ADULT && isBioExPresent) {
+					return "010";
+				} else if (itc == Resident && genderType == MALE && ageCode == CHILD && isBioExPresent) {
+					return "011";
+				} else if (itc == Resident && genderType == MALE && ageCode == ADULT && isBioExPresent) {
+					return "012";
+				} else if (itc == NonResident && genderType == FEMALE && ageCode == CHILD && isBioExPresent) {
+					return "013";
+				} else if (itc == NonResident && genderType == FEMALE && ageCode == ADULT && isBioExPresent) {
+					return "014";
+				} else if (itc == Resident && genderType == FEMALE && ageCode == CHILD && isBioExPresent) {
+					return "015";
+				} else if (itc == Resident && genderType == FEMALE && ageCode == ADULT && isBioExPresent) {
+					return "016";
+				} else if (itc == NonResident && genderType == Others && ageCode == CHILD && isBioExPresent) {
+					return "013";
+				} else if (itc == NonResident && genderType == Others && ageCode == ADULT && isBioExPresent) {
+					return "014";
+				} else if (itc == Resident && genderType == Others && ageCode == CHILD && isBioExPresent) {
+					return "015";
+				} else if (itc == Resident && genderType == Others && ageCode == ADULT && isBioExPresent) {
+					return "016";
+				}
+
+				else if (itc == NonResident && genderType == MALE && ageCode == MINOR && isBioExPresent) {
+					return "014";
+				} else if (itc == Resident && genderType == MALE && ageCode == MINOR && isBioExPresent) {
+					return "015";
+				}
+
+				else if (itc == NonResident && genderType == FEMALE && ageCode == MINOR && isBioExPresent) {
+					return "014";
+				} else if (itc == Resident && genderType == FEMALE && ageCode == MINOR && isBioExPresent) {
+					return "015";
+				}
+
+				else if (itc == NonResident && genderType == Others && ageCode == MINOR && isBioExPresent) {
+					return "014";
+				} else if (itc == Resident && genderType == Others && ageCode == MINOR && isBioExPresent) {
+					return "015";
+				}
+
+				else if (itc == NonResident && genderType == MALE && ageCode == MINOR && !isBioExPresent) {
+					return "014";
+				} else if (itc == Resident && genderType == MALE && ageCode == MINOR && !isBioExPresent) {
+					return "015";
+				}
+
+				else if (itc == NonResident && genderType == FEMALE && ageCode == MINOR && !isBioExPresent) {
+					return "014";
+				} else if (itc == Resident && genderType == FEMALE && ageCode == MINOR && !isBioExPresent) {
+					return "015";
+				}
+
+				else if (itc == NonResident && genderType == Others && ageCode == MINOR && !isBioExPresent) {
+					return "014";
+				} else if (itc == Resident && genderType == Others && ageCode == MINOR && !isBioExPresent) {
+					return "015";
+				}
+				applicantTypeCode = "001";
+				 */
+			}
 			return validDocumentService.getDocumentCategories((String) applicantTypeCode,
 					this.uiFieldDTO.getSubType(),
 					getRegistrationDTo().getSelectedLanguagesByApplicant().get(0));

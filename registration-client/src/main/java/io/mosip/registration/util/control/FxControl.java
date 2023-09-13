@@ -17,6 +17,7 @@ import io.mosip.registration.context.SessionContext;
 import io.mosip.registration.controller.ClientApplication;
 import io.mosip.registration.controller.GenericController;
 import io.mosip.registration.controller.Initialization;
+import io.mosip.registration.controller.nira.GenericControllerCust;
 import io.mosip.registration.dto.RegistrationDTO;
 import io.mosip.registration.dto.mastersync.GenericDto;
 import io.mosip.registration.dto.schema.UiFieldDTO;
@@ -169,7 +170,7 @@ public abstract class FxControl  {
 	 */
 	public void refreshFields() {
 		LOGGER.info(loggerClassName, APPLICATION_NAME, APPLICATION_ID, "Refreshing fields from fx control");
-		GenericController genericController = ClientApplication.getApplicationContext().getBean(GenericController.class);
+		GenericControllerCust genericController = ClientApplication.getApplicationContext().getBean(GenericControllerCust.class);
 		genericController.refreshFields();
 	}
 
@@ -221,6 +222,7 @@ public abstract class FxControl  {
 				}
 				break;
 
+			case LOST:
 			case CORRECTION:
 			case NEW:
 				mandatorySuffix = schema.isRequired() ? RegistrationConstants.ASTRIK : RegistrationConstants.EMPTY;
@@ -304,7 +306,7 @@ public abstract class FxControl  {
 	}
 
 	protected FxControl getFxControl(String fieldId) {
-		return GenericController.getFxControlMap().get(fieldId);
+		return GenericControllerCust.getFxControlMap().get(fieldId);
 	}
 
 	public UiFieldDTO getUiSchemaDTO() {

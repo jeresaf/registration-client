@@ -82,21 +82,21 @@
                               </GridPane>
                               <GridPane fx:id="contentGridPane" GridPane.rowIndex="3">
                                 <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
                                 </columnConstraints>
                                 <rowConstraints>
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <HBox fx:id="demographicHBox" prefHeight="161.0" prefWidth="${contentGridPane.width}" spacing="30" styleClass="updateUinCheckBoxCommon">
+                                    <VBox fx:id="demographicHBox" prefHeight="161.0" prefWidth="${contentGridPane.width}" spacing="30" styleClass="updateUinCheckBoxCommon">
                                        <children>
-                                          <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefViewportHeight="372.0" prefViewportWidth="610.0" styleClass="uinupdate-scroll-pane" vbarPolicy="NEVER">
+                                          <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefViewportHeight="372.0" prefViewportWidth="750.0" styleClass="uinupdate-scroll-pane" vbarPolicy="NEVER">
                                              <content>
-                                                <FlowPane fx:id="parentFlowPane" prefHeight="372.0" prefWidth="${contentGridPane.width}" />
+                                                <FlowPane fx:id="parentFlowPane" hgap="25" vgap="25" prefWrapLength="300" />
                                              </content>
                                           </ScrollPane>
                                        </children>
-                                    </HBox>
+                                    </VBox>
                                  </children>
                               </GridPane>
                            </children>

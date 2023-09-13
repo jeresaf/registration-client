@@ -72,7 +72,7 @@ public class UpdateUINCustController extends BaseController implements Initializ
 	FlowPane parentFlowPane;
 	
 	@FXML
-	private HBox demographicHBox;
+	private VBox demographicHBox;
 	
 	@FXML
 	private ScrollPane scrollPane;	
@@ -80,6 +80,7 @@ public class UpdateUINCustController extends BaseController implements Initializ
 	private ObservableList<Node> parentFlow;
 
 	private HashMap<String, Object> checkBoxKeeper;
+	private HashMap<String, String> checkBoxGroupKeeper;
 
 	private Map<String, List<UiFieldDTO>> groupedMap;
 	private Map<String, Map<String, String>> groupLabels;
@@ -100,6 +101,7 @@ public class UpdateUINCustController extends BaseController implements Initializ
 		
 		fxUtils = FXUtils.getInstance();
 		checkBoxKeeper = new HashMap<>();
+		checkBoxGroupKeeper = new HashMap<>();
 
 		groupedMap = new HashMap<>();
 		groupLabels = new HashMap<>();
@@ -126,10 +128,11 @@ public class UpdateUINCustController extends BaseController implements Initializ
 			groupGridPane.setId(groupName + "id");
 			groupGridPane.setMinWidth(20.0);
 			groupGridPane.setMinHeight(20.0);
+			groupGridPane.setPrefWidth(750);
 			groupGridPane.getStyleClass().add("sectionDemographic");
 			int groupRowIndex = 0;
-			VBox ageVBox = new VBox();
-			ageVBox.setPrefWidth(390);
+			VBox vBox = new VBox();
+			//vBox.setPrefWidth(390);
 
 			Label label = new Label();
 			label.setId("Group " + groupName + " Label");
@@ -140,27 +143,30 @@ public class UpdateUINCustController extends BaseController implements Initializ
 
 			HBox labelField = new HBox();
 			labelField.getChildren().add(label);
-			ageVBox.getChildren().add(labelField);
+			vBox.getChildren().add(labelField);
 
-			HBox hBox = new HBox();
-			hBox.setSpacing(30);
-			hBox.getChildren().add(ageVBox);
-			HBox.setHgrow(ageVBox, Priority.ALWAYS);
+			groupGridPane.add(vBox, 0, groupRowIndex++);
 
-			groupGridPane.add(hBox, 0, groupRowIndex++);
+			FlowPane flowpane = new FlowPane();
+			flowpane.setHgap(10);
+			flowpane.setVgap(10);
+			flowpane.setPrefWrapLength(500);
+
+			groupGridPane.add(flowpane, 0, groupRowIndex);
 
 			list.forEach((field) -> {
 				//getRegistrationDTo().getSelectedLanguagesByApplicant().forEach(lCode -> labels.add(this.uiFieldDTO.getLabel().get(lCode)));
-				//GridPane checkBox = addCheckBox(field.getId());
-				//if (checkBox != null) {
-					//parentFlow.add(checkBox);
-				//}
+				GridPane checkBox = addCheckBox(getLabelsForGroup(field.getLabel()) ,field.getId(), field.getGroup());
+				if (checkBox != null) {
+					flowpane.getChildren().add(checkBox);
+				}
 			});
+			parentFlow.add(groupGridPane);
 		});
 
 		try {
 			
-			backBtn.hoverProperty().addListener((ov, oldValue, newValue) -> {
+			if(backBtn != null) backBtn.hoverProperty().addListener((ov, oldValue, newValue) -> {
 				if (newValue) {
 					setImage(backImageView, RegistrationConstants.BACK_FOCUSED_IMG);
 				} else {
@@ -173,13 +179,14 @@ public class UpdateUINCustController extends BaseController implements Initializ
 		}
 	}
 
-	private GridPane addCheckBox(String fieldName, String fieldId) {
+	private GridPane addCheckBox(String fieldName, String fieldId, String group) {
 		CheckBox checkBox = new CheckBox(fieldName);
 		checkBox.setId(fieldId);
 		checkBox.setTooltip(new Tooltip(fieldName));
 		checkBox.getStyleClass().add(RegistrationConstants.updateUinCheckBox);
 		fxUtils.listenOnSelectedCheckBox(checkBox);
 		checkBoxKeeper.put(fieldId, checkBox);
+		checkBoxGroupKeeper.put(fieldId, group);
 		
 		GridPane gridPane = new GridPane();
 		gridPane.setPrefWidth(400);
@@ -237,7 +244,7 @@ public class UpdateUINCustController extends BaseController implements Initializ
 			List<String> selectedFieldGroups = new ArrayList<String>();
 			for (String key : checkBoxKeeper.keySet()) {
 				if (((CheckBox) checkBoxKeeper.get(key)).isSelected()) {
-					selectedFieldGroups.add(key);
+					selectedFieldGroups.add(checkBoxGroupKeeper.get(key));
 				}
 			}
 			selectedFieldGroups.add("consent");
